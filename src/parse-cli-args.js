@@ -44,6 +44,8 @@ export default function parseCliArgs(argv) {
     throw 'No command provided';
   }
 
+  console.log(command);
+
   let options = commands[command].parseArgs(argv.slice(1));
 
   if (commandOptions.help) {
